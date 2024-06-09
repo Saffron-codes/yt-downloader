@@ -6,6 +6,9 @@ from PyQt6.QtWidgets import QApplication, QLineEdit, QMainWindow, QVBoxLayout, Q
 from PyQt6.QtCore import QObject, QThread, pyqtSignal
 
 from pytube import YouTube
+from pytube.innertube import _default_clients
+
+_default_clients["ANDROID_MUSIC"] = _default_clients["ANDROID_CREATOR"]
 
 class MainWindow(QMainWindow):
     def __init__(self):
